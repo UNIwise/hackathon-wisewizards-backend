@@ -8,6 +8,7 @@ import (
 	"github.com/UNIwise/go-template/internal/rest/controllers"
 	"github.com/UNIwise/go-template/internal/rest/helpers"
 	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 )
@@ -38,22 +39,22 @@ func NewServer(conf Config, logger *logrus.Entry, authorizationService authoriza
 	// 	return nil, errors.Wrap(err, "Failed to create prometheus middleware")
 	// }
 
-	// e.Use(
-	// 	middleware.Recover(),
-	// 	prometheusMiddleware,
-	// 	middleware.CORSWithConfig(middleware.CORSConfig{
-	// 		AllowOrigins: []string{"*"},
-	// 	}),
-	// 	xmid.RequestIDWithConfig(xmid.RequestIDConfig{
-	// 		Generator: middleware.DefaultRequestIDConfig.Generator,
-	// 		Header:    "X-Trace-ID",
-	// 		Skipper:   middleware.DefaultRequestIDConfig.Skipper,
-	// 	}),
-	// 	middleware.GzipWithConfig(middleware.GzipConfig{
-	// 		Level:   gzipCompressionLevel,
-	// 		Skipper: middleware.DefaultGzipConfig.Skipper,
-	// 	}),
-	// )
+	e.Use(
+		middleware.Recover(),
+		// prometheusMiddleware,
+		middleware.CORSWithConfig(middleware.CORSConfig{
+			AllowOrigins: []string{"*"},
+		}),
+		// xmid.RequestIDWithConfig(xmid.RequestIDConfig{
+		// 	Generator: middleware.DefaultRequestIDConfig.Generator,
+		// 	Header:    "X-Trace-ID",
+		// 	Skipper:   middleware.DefaultRequestIDConfig.Skipper,
+		// }),
+		// middleware.GzipWithConfig(middleware.GzipConfig{
+		// 	Level:   gzipCompressionLevel,
+		// 	Skipper: middleware.DefaultGzipConfig.Skipper,
+		// }),
+	)
 
 	root := e.Group("/hackathon")
 

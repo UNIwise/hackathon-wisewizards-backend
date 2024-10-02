@@ -9,8 +9,7 @@ require (
 	github.com/ThreeDotsLabs/watermill-nats v1.0.7
 	github.com/aws/aws-sdk-go-v2 v1.31.0
 	github.com/aws/aws-sdk-go-v2/config v1.27.39
-	github.com/awsdocs/aws-doc-sdk-examples/gov2/bedrock-runtime v0.0.0-20241001193045-4c5489e95233
-	github.com/awsdocs/aws-doc-sdk-examples/gov2/demotools v0.0.0-20241001193045-4c5489e95233
+	github.com/aws/aws-sdk-go-v2/service/bedrockruntime v1.16.2
 	github.com/go-gormigrate/gormigrate/v2 v2.1.2
 	github.com/go-playground/validator v9.31.0+incompatible
 	github.com/google/uuid v1.6.0
@@ -36,12 +35,12 @@ require (
 	github.com/aws/aws-sdk-go-v2/credentials v1.17.37 // indirect
 	github.com/aws/aws-sdk-go-v2/feature/ec2/imds v1.16.14 // indirect
 	github.com/aws/aws-sdk-go-v2/internal/ini v1.8.1 // indirect
-	github.com/aws/aws-sdk-go-v2/service/bedrockruntime v1.16.2 // indirect
 	github.com/aws/aws-sdk-go-v2/service/sso v1.23.3 // indirect
 	github.com/aws/aws-sdk-go-v2/service/ssooidc v1.27.3 // indirect
 	github.com/aws/aws-sdk-go-v2/service/sts v1.31.3 // indirect
+	github.com/golang-jwt/jwt v3.2.2+incompatible // indirect
 	github.com/rogpeppe/go-internal v1.10.0 // indirect
-	golang.org/x/term v0.24.0 // indirect
+	golang.org/x/time v0.6.0 // indirect
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
 )
 
