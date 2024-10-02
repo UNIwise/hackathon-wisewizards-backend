@@ -18,8 +18,8 @@ import (
 )
 
 type handlePromptRequest struct {
-	Prompt string `json:"prompt"`
-	Grade  string `json:"grade" validate:"required"`
+	StudentName string `json:"student_name" validate:"required"`
+	Grade       string `json:"grade" validate:"required"`
 }
 
 type dostuffResponse struct {
@@ -44,7 +44,7 @@ func (handlers *Handlers) dostuff(ctx contexts.AuthenticatedContext) error {
 		return echo.ErrBadRequest
 	}
 
-	response := callClaude(req.Grade)
+	response := callClaude(req.StudentName, req.Grade)
 
 	data := &dostuffResponse{
 		Response: response,
@@ -56,7 +56,7 @@ func (handlers *Handlers) dostuff(ctx contexts.AuthenticatedContext) error {
 	})
 }
 
-func callClaude(grade string) string {
+func callClaude(studentName string, grade string) string {
 	var region = aws.String("eu-central-1")
 	sdkConfig, err := config.LoadDefaultConfig(context.Background(), config.WithRegion(*region))
 	if err != nil {
@@ -120,6 +120,7 @@ func callClaude(grade string) string {
 		1. What are the key strengths and weaknesses of the student's submission?
 		2. How does the grade align with the submission content?
 		3. What recommendations would you make for the student's future improvement?
+		4. Please refer to the student by the name: ` + studentName + `
 
 		As an assessor, provide a detailed explanation (in bullet form) for why that specific grade was given to the student, based on the attached documents.
 		Please ensure your explanation covers both strengths and areas for improvement in the student's work.
