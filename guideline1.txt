@@ -1,0 +1,251 @@
+JUR 34101 Innføring i kontraktsrett- Sensorveiledning
+Høst 2023
+Introduksjon
+Denne sensorveiledningen er først og fremst rettet til sensorene. Hensikten med veiledningen er å
+sikre en korrekt og felles vurdering av eksamensbesvarelsene. Det er imidlertid også et mål at
+sensorveiledningen fungerer som en rettledning for studentene om hvordan oppgaven skulle kunne
+løses. Som det kommer frem av veiledningen, er det rom for ulike løsninger. Vi forventer heller ikke at
+studentene har sett alle problemstillinger oppgaven reiser.
+Besvarelsen bedømmes som bestått/ikke bestått. Det er ikke et vilkår for å bestå eksamen at alle
+spørsmål er løst i tråd med veiledningen.
+For å bestå oppgaven må studentene vise at de har tilegnet seg de kunnskaps- og ferdighetsmål som
+er beskrevet i kursbeskrivelsen JUR 3410 Innføring i kontraktsrett | Programmeinfo BI. Det kreves blant
+annet god kunnskap i materiell avtale- og kjøpsrett samt evne til å identifisere og løse teoretiske og
+praktiske avtalerettslige og kjøpsrettslige problemstillinger ved hjelp av juridisk metode. I tillegg er det
+et vilkår at studentene kan formulere og formidle kunnskap om avtalerettslige og kjøpsrettslige
+problemstillinger. Dette betyr at vi ved sensuren ikke bare legger vekt på at studentene kan identifisere
+og løse de rettslige spørsmålene oppgaven reiser. Evnen til å uttrykke seg klart og konsist inngår også
+i vurderingsgrunnlaget.
+Veiledningen viser til lærebøkene av pedagogiske hensyn. Lærebøkene skal ikke benyttes på denne
+måten i en besvarelse.
+Bruktmobil AS v. Peder Ås
+1. Foreligger det en mangel ved salget fra Bruktmobil AS til Peder Ås?
+Peder krever hevning av mobiltelefonkjøp. Det fremgår av oppgaven at Peder «trengte en ny
+smarttelefon til å bruke i jobben sin som bruktbilforhandler». Kjøpet reguleres derfor av kjøpsloven,
+jf. kjl. § 1. Ettersom oppgaven ikke legger opp til det, er det ikke nødvendig å drøfte betydningen av at
+Peder kanskje også bruker telefonen privat (og at kjøpet derfor skulle kunne regnes som et
+forbrukerkjøp slik at forbrukerkjøpsloven kommer til anvendelse, jfr fbkjl. § 1). Studentene skal ikke
+trekkes om de diskuterer lovvalget, det blir derimot feil å konkludere med at dette er et forbrukerkjøp.
+Hjemmelen for hevingskravet er kjøpsloven § 39 (1): «Kjøperen kan heve kjøpet dersom mangelen
+medfører vesentlig kontraktbrudd». Det er to kumulative vilkår for heving: For det første må det
+foreligge en mangel og før det andre må mangelen lede til et vesentlig kontraktsbrudd. Det må altså
+foreligge en vesentlig mangel.
+Det første spørsmålet som skal drøftes er derfor om mobiltelefonen har en mangel.
+Tidspunktet for mangelsvurderingen er når risikoen for varen går over på kjøperen, dvs. ved levering
+20 november, jf. kjl. §§ 21 og 13. Bruktmobil AS hevder at «telefonen var i orden, med godkjent batteri,
+da den ble levert til Peder og at selskapet etter dette tidspunktet ikke hadde noe ansvar for den». Det
+er riktig at telefonen var i samsvar med rådende sikkerhetsforskrifter da den ble levert. Det ble
+imidlertid etter levering påvist at batteriene var ubrukelige. En mobiltelefon som tar fyr ved ladning er
+ikke i samsvar med de krav til «kvalitet» og «andre egenskaper» som følger av avtalen, se kjl § 17 (1).
+En slik telefon passer heller ikke for de formål som tilsvarende ting vanligvis bruke til, kjl § 17 (2) a. At
+en gjenstand har skadevoldende egenskaper har i rettspraksis blitt ansett for å være en «klar» mangel,
+se for eksempel agurkpinnedommen, Rt-2004-675, avsnitt 37:
+« Det følger av kjøpsloven § 17 andre ledd bokstav a at dersom ikke annet er avtalt, skal
+salgsgjenstanden blant annet passe for de formål som tilsvarende ting vanligvis brukes til.
+Splittbambuspinner blir brukt til å støtte opp agurkplanter og andre grønnsakplanter i den første
+vekstfasen. Det er en forutsetning for at pinnene skal kunne brukes til dette formålet, at de ikke er
+bærere av aggressive sopparter. Som det fremgår av det jeg har sagt under fremstillingen av
+saksforholdet, er penicillium oxalicum en svært aggressiv soppart som produserer store mengder med
+sporer som spres lett. Selv om sopparten er en naturlig forekomst, finner jeg det klart at den
+omstendighet at splittbambuspinner som blir brukt i forbindelse med produksjon av agurker, er smittet
+med denne sopparten, må anses som en kjøpsrettslig mangel.»
+Tilsvarende må det kunne konkluderes med at en mobiltelefon må kunne lades uten at den tar fyr.
+Peder må gis medhold i at et batteri som tar fyr ved lading av telefonen, medfører at telefonen har en
+mangel, selv om batteriene var i godkjent for bruk i mobiltelefoner. En mangel behøver ikke vise seg
+ved levering, det er nok at det godtgjøres at den forelå – latent – ved levering, se prinsippet i
+Videospillerdommen, Rt. 1988 s. 774, samt Selvig/Lilleholt s. 88. Utgangspunktet er derfor at det
+foreligger en mangel som Bruktmobil AS har ansvar for.
+Dette gjelder dog bare om «annet ikke følger av avtalen», kjl. § 17(2). Neste spørsmål blir derfor om
+partene har avtalt noe annet.
+Bruktmobils anførsel om at det stod klart i instruksene på hjemmesiden at telefonen ikke måtte lades
+uten tilsyn og at Peder burde ha innrettet seg etter dette, må ses på som en anførsel om en
+ansvarsfraskrivelse for feil som kan oppstår under lading. Anførselen må behandles, men vil nok ikke
+føre frem da det bør vises til at vilkåret ikke er vedtatt av Peder og derfor ikke en del av
+kontraktsvilkårene. Det må kunne hevdes at kontraktsvilkåret er så uvanlig og overraskende at det av
+den grunn ikke kan anses vedtatt, jf., Pakkeseddeldommen, Rt. 1968 s. 1188, Agurkpinnedommen, Rt2004-675 og Giertsen s. 95 flg. Det er avgjort i strid med praksis å kreve tilsyn av en mobil under lading.
+Et så klart avvik fra bransjepraksis måtte ha blitt formulert tydeligere av den som påberoper seg det.
+Her kan varianter av uklarhetsregelen komme inn, dersom studentene er oppfinnsomme. Som
+eksempel på betydningen av bransjepraksis ved tolkning kan vises til Dalefabrikker-dommen, Rt. 1997
+s. 160 og Giertsen s. 183. Her hadde Dalefabrikker unnlatt å sette inn i kontrakten at vinneren av en
+designkonkurranse ikke skulle ha krav på royalties av Dales salg. Vilkåret var ikke i tråd med
+bransjepraksis og kunne derfor ikke anses vedtatt av designvinneren når det ikke var uttrykkelig nevnt
+i kontrakten.
+Studentene bør komme til at Bruktmobils anførsel ikke kan føre frem.
+Konklusjonen blir at det foreligger en mangel.
+2. Forutsatt at det foreligger en mangel, har Peder krav på heving av kjøpet og/eller erstatning
+fra Bruktmobil AS?
+Når det gjelder hevingsspørsmålet er dette relativt klart. Studentene bør ha kommet til at det
+foreligger en mangel som Bruktmobil AS har risikoen for. Mobilen er totalt ødelagt. Telefonen kan ikke
+brukes til sitt formål. Kjøpet er fullstendig forfeilet.
+Det kan derfor konkluderes med at vilkåret i kjl. § 39 (1) om at mangelen må medføre «vesentlig
+kontraktbrudd» er oppfylt. Virkningene av at et kjøp som er gjennomført heves, er at det mottatte kan
+kreves tilbakeført, se kjl. § 64 (2). I utgangspunktet må Peder levere tilbake mobiltelefonen «i vesentlig
+samme stand og mengde som han mottok den» kjl. § 66 (1). Plikten til slik tilbakelevering forutsetter
+imidlertid at tilbakelevering er mulig, kjl. § 66 (1) a. Peders mobiltelefon har brent opp, så
+tilbakelevering er ikke mulig og dermed ikke et hinder for å kreve heving. Dette innebærer at Peder
+kan heve kjøpet og at Bruktmobil AS må betale tilbake de 4000 kronene som Peder betalte for
+telefonen.
+Konklusjon: Peder kan heve kjøpet
+Det neste spørsmålet er om Peder kan kreve erstatning for ulike poster. Det følger eksplisitt av kjl. §
+30 (1) annet punktum at Peders rett til erstatning ikke faller bort ved at andre krav (som heving) gjøres
+gjeldende.
+I og med at det her er snakk om ulike typer av erstatningsposter, bør studentene drøfte både om det
+foreligger kontrollansvar (som gir rett til erstatning for direkte tap) og om det foreligger culpa (som
+dekker både direkte og indirekte tap).
+Utgangspunktet for kontrollansvaret er at selgeren, Bruktmobil AS, blir ansvarlig om de ikke «godtgjør
+at det forhold at leveringen er mangelfull, skyldes hindring som nevnt i § 27», jfr § 40 (1). Dette
+nærmest objektive ansvaret gjelder etter § 27 (1) annet pkt. «likevel ikke så langt selgeren godtgjør at
+[mangelen] skyldes hindring utenfor hans kontroll som han ikke med rimelighet kunne ventes å ha tatt
+i betraktning på avtaletiden eller å unngå eller overvinne følgene av».
+Studentene må komme til at det foreligger kontrollansvar for Bruktmobil AS. Selskapet har valgt Tastad
+som forårsaker at Bruktmobil AS ikke leverer kontraktsmessig. Hindringen består i at batteriet har feil.
+Denne hindringen ligger innenfor Tastads kontroll og ville også ha ligget innenfor Bruktmobil AS´
+kontroll, jf. § 40 første ledd jf. § 27 andre ledd andre punktum jf, § 27 første ledd.
+Studentene bør kort drøfte om det er grunnlag for culpa, jf. § 40 § tredje ledd jf. andre ledd, jf. § 67
+andre ledd. Dette fordi enkelte av tapspostene aspirerer til å falle innunder indirekte tap, jf. kjøpsloven
+§ 67 andre ledd. Peder er derfor avhengig av å påvise culpa («feil eller forsømmelse»), jf. kjøpsloven §
+40 tredje ledd bokstav a. Denne drøftelsen bør imidlertid gjøres kort. Tastads bruk av et godkjent
+batteri kvalifiserer neppe for culpa.
+Det er litt vanskelig for studentene å legge dette opp oppgaveteknisk, men oppgaven vil nok uansett
+skille mellom de som forstår og ikke forstår forholdet mellom ansvarsgrunnlaget og rekkevidden av
+tapsdekningen. I denne oppgaven faller noen av postene under direkte tap, mens andre faller innenfor
+indirekte tap. Det blir derfor nødvendig for studentene å drøfte og ta stilling til hvilket ansvarsgrunnlag
+som foreligger.
+Hvis culpa, blir det erstatning for indirekte tap. Men her er det ikke grunnlag for å komme til culpa,
+hverken hos Tastad eller Bruktmobil AS. Derfor blir det ikke ansvar for indirekte tap. Peder kan derfor
+bare kreve erstatning for de tapsposter som kvalifiserer som direkte tap.
+Tapspostene:
+Peder krever erstatning for
+1. Elektrokostnader, utskiftning av anlegg, 70 000 kroner
+2. Elektrokostnader, reparere anlegget knyttet til den ødelagte stikkontakten, 30 000 kroner
+3. Tap av mobiltelefon (subsidiært) 40000 kroner og ladekabel 399 kroner
+4. Tap av matvarer i kjøleskap 2000 kroner
+5. Tapte inntekter 240 000 kroner
+1. Elektrokostnadene på 70 000 faller utenfor tapet «som følge av mangelen». Det foreligger ikke
+årsakssammenheng mellom mangelen og elektrokostnadene. Peder kan ikke kreve disse kostnadene
+dekket av Bruktmobil AS.
+2. Når det gjelder elektrokostnadene knyttet til kursen for den stikkontakten ladekabelen var koblet til,
+30 000 kroner, regnes dette som tap som skade på annet enn salgstingen selv, jf. § 67 andre ledd
+bokstav d.) og dermed som et indirekte tap. For å få erstatning for en slik utgiftspost kreves det culpa,
+dvs. at Hans Tastad har utvist feil eller forsømmelse. I og med at batteriene var godkjent for bruk i
+mobiltelefoner, kan man vanskelig hevde at Tastad har utvist feil (se ovenfor). Det foreligger ikke culpa,
+og Peder kan ikke kreve dette tapet dekket av Bruktbil AS.
+3. Både mobiltelefonen og laderledningen faller utenfor listen over indirekte tap i § 67 (2), se særlig §
+67 (2) d. Bestemmelsen kan være noe vanskelig å forstå, men meningen er å avgrense det indirekte
+tapet til skade på annet enn «salgstingen selv og gjenstander … som har nær og direkte sammenheng
+med dens fortsatte bruk». Skade på salgstingen selv og gjenstander som har nær og direkte
+sammenheng med dens bruk, regnes som direkte tap. Det er klar årsakssammenheng mellom tapene
+og mangelen. Studentene bør konkludere med at Peder som utgangpunkt kan kreve erstatning for
+skade på mobiltelefonen og laderledningen, totalt 4399 kroner. Når det gjelder mobiltelefonen, vil
+Peder kunne få de 4000 kronene tilbakebetalt som en del av hevingsoppgjøret (se ovenfor). Om man
+har konkludert med at Peder har rett til heving og tilbakebetaling av de 4000 kronene, foreligger
+strengt tatt ikke et tap. Han kan ikke kreve de 4000 kronene to ganger, på to ulike rettsgrunnlag. Det
+er et pluss om studentene se dette poenget, men ikke et minus om de kommer til at Peder har rett til
+å kreve erstatning for mobiltelefonen, uten at forholdet til hevingsbestemmelsen er drøftet.
+4. Når det gjelder tapet knyttet til ødelagt mat, kr. 20 000, er dette å regne som «tap som følge av
+skade på annet enn salgstingen selv», jf. § 67 andre ledd bokstav d). Det er med andre ord et indirekte
+tap. Her foreligger ikke culpa og Peder kan ikke kreve erstatning for tapet.
+Hvis ikke studentene plasserer tapet under indirekte tap, men kommer til at det er et direkte tap,
+oppstår en annen problemstilling, når det gjelder maten: Adekvansbegrensing jf. § 67 første ledd andre
+punktum kan diskuteres. Spørsmålet blir da om Bruktmobil AS med rimelighet kunne forutse den
+aktuelle følgen. Det er en rekke årsaksledd mellom batteriet og tapet, jf. batteri påvirker telefon,
+telefon og batteri påvirker ladeledning, som igjen påvirker stikkontakt og elektrisk anlegg, som igjen
+påvirker kjøleskapet gjennom manglende strøm. Av denne grunn blir fiskevarer som tilfeldigvis er
+lagret i kjøleskapet skjemt/ødelagt. Hvis studentene argumenterer etter disse linjer for å komme til en
+adekvansbegrensing, må det oppfattes som positivt.
+5) Den vanskeligste tapsposten, er Peders inntektstap. Tapt salg av bruktbiler skulle kunne falle
+innunder ordlyden i § 67 andre ledd bokstav c) «tapt fortjeneste som følge av at en kontrakt med
+tredjemann faller bort» og dermed regnes som et indirekte tap.
+Bestemmelsen gjelder etter sin ordlyd bare tapt fortjeneste fra kontrakter som er inngått (det er en
+forutsetning at en avtale er inngått, for at den skal kunne falle bort eller ikke bli riktig oppfylt). Tap som
+følge av at en part ikke inngår en kontrakt (slik som i vår sak), faller derfor utenfor bestemmelsen. Slik
+tapt fortjeneste er likevel bare indirekte dersom kjøperen «uten rimelig grunn lar være å foreta
+dekningskjøp eller treffe andre tiltak for å unngå eller minske tapet». Tapet er med andre ord indirekte
+dersom parten både unnlater å treffe tiltak for å unngå eller minske tapet og ikke har en rimelig grunn
+til å unnlate å gjøre det.
+I vår sak har Peder unnlatt å treffe tiltak for å unngå eller minske tapet, men det kan diskuteres om
+han hadde en rimelig grunn til å unnlate å gjøre det. Peder har vurdert å flytte bruktbilsalget til
+parkeringsplassen, men kommet til at dette ville gå utover butikkens renomme. Det må være greit å
+komme til at han har en rimelig grunn til å unnlate å minske tapet, men begge løsninger aksepteres.
+Om man konkluderer med at han har en rimelig grunn til å unnlate å minske tapet, skal tapet regnes
+som direkte. Peder vil da kunne krever erstatning for 240 000 kroner med hjemmel i kontrollansvaret.
+Her vil man likevel kunne diskutere om dette tapet er påregnelig, jfr kjl. § 67 (1) annet pkt «Dette
+gjelder likevel bare tap som en med rimelighet kunne ha forutsett som en mulig følge av
+kontraktbruddet». Studentene bør kunne konkludere med at dette tapet er for avledet og upåregnelig
+til at Bruktmobil AS skulle kunne forutse det. Konklusjonen blir derfor at Peder ikke kan kreve
+inntjeningstapet erstattet.
+Det samme blir resultatet om man kommer til at renommetapet ikke er en rimelig grunn for Peder til
+å unnlate å minske tapet. De 240 000 kronene skal da regnes som indirekte tap. Det foreligger ikke
+culpa og da faller indirekte tap utenfor Bruktbil AS’s ansvar.
+Studentene bør komme til at Peder ikke kan kreve 240 000 kroner erstattet. Begge forklaringer
+aksepteres.
+3. Foreligger det kontraktsbrudd i kontrakten mellom Hans Tastad og Bruktmobil AS?
+Bruktmobil AS varsler Hans Tastad om at jfr. «…dersom selskapet ble ansvarlig for å betale noen av
+Peders erstatningskrav, ville det kreve erstatning for tilsvarende beløp fra Hans, som var den som
+egentlig hadde gjort feilen». Kravet fra Bruktmobil er egentlig et regresskrav; men er formulert som
+et erstatningskrav, for å unngå at studentene skal måtte bevege seg ut i for ukjent terreng. Studentene
+må derfor diskutere om det for Tastad kan holdes ansvarlig med grunnlag i et erstaningsansvar basert
+på brudd på kontrakten med Bruktmobil.
+Det kan være vanskelig for studentene å bestemme hvilke regler som skal avgjøre tvisten. Avtalen
+mellom Tastad og Bruktbil AS er ikke er kjøpsavtale, men en avtale om en tjeneste, så kjøpsloven
+gjelder ikke. Hans Tastad kan ikke regnes som forbruker; så håndverkertjenesteloven gjelder heller
+ikke (jf hvtj. § 1). Når det gjelder spørsmålet om det foreligger kontraktsbrudd, bør studentene ta
+utgangspunkt i partenes avtale og tolke hva denne inneholder for så å avgjøre om det foreligger
+kontraktsbrudd. Det er naturlig om studentene trekker på den tidligere kjøpsrettslige drøftelsen av om
+det foreligger en mangel. Problemstillingen er den samme her: Tastad leverer en mobil med et nytt
+batteri med en iboende svakhet. Konklusjonen må bli at han ikke har levert kontraktsmessig overfor
+Bruktmobil AS.
+Studentene bør konkludere med at det foreligger kontraktsbrudd.
+4. Forutsatt at det foreligger kontraktsbrudd, er Hans Tastad erstatningsansvarlig overfor
+Bruktmobil AS?
+Noen vil studenter vil muligens få problemer når de skal drøfte hvilket ansvarsgrunnlag Tastad har
+overfor Bruktmobil. Vi bør derfor ikke være for strenge i bedømmelsen av spm. 4. Studentene bør
+komme til at Tastad ikke har handlet culpøst overfor Bruktmobil, og at han derfor ikke blir ansvarlig for
+indirekte tap.
+Spørsmålet om hvilket ansvar Tastad har er noe åpent. Avtalen er ikke en kjøpsavtale (det gjelder ikke
+salg av ting, men reparasjon). Tastad utfører en tjeneste for Bruktmobil AS). Hans Tastad har mest
+sannsynlig et kontrollansvar etter en ulovfestet kontraktrettslig ansvarsregel. Denne kan utledes på
+grunnlag av ulike analogibetraktninger, og det må aksepteres at studentene tar utgangpunkt i en
+analogi fra kjøpsloven.
+Med kontrollansvar vil Tastad være ansvarlig for direkte tap. I kontraktsforholdet mellom Peder og
+Bruktmobil vil dette egentlig kun omfatte tapet av selve mobilen, som kostet rundt 1 000 kroner i
+innkjøp (jf. «en tusenlapp»). Tapet knyttet til at Peder enten hever eller får erstatning for selve mobilen
+er i relasjon til kontraktsforholdet mellom Tastad og Bruktmobil AS et indirekte tap, idet det for
+Bruktmobil AS er «tapt fortjeneste som følge av at en kontrakt med tredjemann … Ikke blir riktig
+oppfylt», jf. § 67 andre ledd bokstav c).
+Også de øvrige tapspostene er indirekte tap, og de studentene som er flinke, kan hvile i de drøftelsen
+de allerede har foretatt. Det er derfor ikke så mye å skrive for studentene om dette.
+Konklusjonen blir at Hans Tastad ikke blir erstatningsansvarlig i forhold til Bruktbil AS.
+Oppgaven er vanskelig og bør derfor ikke tillegges for stor vekt.
+For avgjørelsen av spørsmål 4. skal det tas stilling til om Hans Tastad kan gjøre gjeldende en
+ansvarsfraskrivelse.
+Forutsatt at Tastad blir erstatningsansvarlig, blir spørsmålet om han likevel kan unngå ansvar ved å
+henvise til ansvarsfraskrivelsen. Her foreligger det ikke, i alle fall ikke etter det skriftlige, noen
+fullstendig avtaleslutning etter avtalelovens kapittel 1. Det foreligger et tilbud fra Tastad som ikke er
+akseptert skriftlig innen fristen, slik det er lagt opp til. I utgangspunktet er vi da i avtalelovens § 2, jf.
+overskriften til avtalelovens kapittel 1, som leder til at avtale ikke er inngått. Hvis ikke avtale med
+vilkåret om ansvarsfraskrivelse er inngått, er Bruktmobil heller ikke bundet, og kan kreve erstatning
+(egentlig regress) av Tastad.
+Men her kommer det inn at begge partene fortsetter sitt opprinnelige avtaleforhold som om ingenting
+har hendt. Kan Bruktmobil anses å ha akseptert ansvarsfraskrivelsen gjennom konkludent atferd? Her
+er litt for studentene å spille på.
+Peders e-post har et element av definering av avtaleprosess, jf. Stømstadommen Rt-2014-100. En
+sammenligning med denne kan lede til at Bruktmobil ikke kan anses bundet så lenge prosedyren ikke
+er fulgt.
+På den annen side gjelder formfrihetsprinsippet, og det er intet i veien for å binde seg på andre måter
+enn skriftlig. Jf. Giertsen s. 51.
+Et element i bildet er at Bruktmobil fortsetter å levere mobiltelefoner til Tastad, mens han ikke
+protesterer. Han følger altså ikke opp sitt eget vilkår om å terminere kontrakten.
+Hvis studenter er inne på at det på dette grunnlaget kan anses å være inngått en ny avtale uten
+ansvarsfraskrivelse, alternativt at den gamle avtalen gjelder som før, må det anses å være innsiktsfullt.
+Her er et punkt hvor studentene kan tenke selv.
+Siden utgangspunktet i norsk avtalerett er at man ikke bindes ved passivitet, og det er lagt opp til
+skriftlig avtaleslutning, er det sannsynlig at ansvarsfraskrivelsen ikke kan gjøres gjeldende. Det er et
+resultat som samsvarer med Strømstad-dommen, selv om partskonstellasjonen i vår sak er litt
+forskjellig. Her er det den som ønsker å få til en avtale som stiller vilkår for binding som blir brukt mot
+ham.
+Avtalelovens § 8 regulerer ikke om det er inngått en avtale med tilbud og stilltiende aksept, dette
+spørsmålet må avgjøres konkret. Spørsmål som kan drøftes er hva partene hadde grunn til å forvente.
+Håpet er at studentene får anledning til å vise at de kan noen relevante regler fra alminnelig avtalerett.
+De må konkludere med at ansvarsfraskrivelsen enten gjelder eller gjelder ikke. Begge løsninger bør
+aksepteres. Også dette er en vanskelig oppgave som det ikke skal legges for stor vekt på.

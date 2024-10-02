@@ -1,0 +1,96 @@
+WISEflow
+Europe/Oslo(CEST)
+30 Nov 2023
+JUR 3 4101 Innfø ring i
+kontrakt s re tt
+W r i t t e n e x a m i n a t i o n- 1W0 0 %
+Handelshøyskolen BI
+Start date: 30-11-2023 09:00 CET
+End date: 30-11-2023 15:00 CET
+Examination type: E
+Term: 202320
+Grading scale: Passed/Not passed
+Flow code: 202320||20814||IN02||W||E
+External assessor: External assessor 1
+Internal assessor: Internal assessor 1
+P r e d e f i n e d I n f o r m a t i o n
+BannerId: 1003969
+P a r t i c i p a n t
+1. Foreligger det en mangel ved salget fra Bruktmobil AS til Peder Ås?
+Første problemstilling vi må ta hensyn til er om Peder regnes som forbruker eller næringsdrivende.
+Jf. forbrukerkjøpsloven § 1 andre ledd menes salg av ting til en forbruker når selgeren eller selgerens representant opptrer i
+næringsvirksomhet. Jf. fkjl. § 1 tredje ledd vil en forbruker være en fysisk person som ikke hovedsaklig handler som ledd i
+næringsvirksomhet.
+I forarbeidene til forbrukerkjøpsloven fremgår det at det også skal tas hensyn til hva formålet med kjøpet av tingen er.
+Peder sitt formål med kjøpet er å bruke det til arbeidet sitt som bruktbilforhandler, noe som taler for at han er
+næringsdrivende.
+Imidlertid regner vi med at Peder også kommer til å bruke mobilen privat som ikke angår arbeid knyttet til firmaet hans.
+Ettersom Peder sitt formål med mobilen er å bruke det til arbeid, kommer vi fram til at han opptrer som næringsdrivende.
+Vi slår også fast at Bruktmobil AS er næringsdrivende. Ettersom det er to næringsdrivende i tvisten vil kjøpsloven komme til
+anvendelse.
+Peder anfører at batteriet ikke var egnet til mobiltelefoner. Jf. kjøpsloven § 21 første ledd vil en bedømmelse av om tingen
+har en mangel komme an på tidspunktet risikoen går over på kjøper legges til grunn. På tidspunktet av salget var batteriet
+godkjent av norske myndigheter og det var ingen tilgjengelig informasjon om at det ikke kunne benyttes. Det var ikke før
+etter hendelsen hvor telefonen tok fyr og en slik hendelse forekom hos flere at det ble kjent at batteriet ikke lenger kunne
+brukes. Det vil si at mobilen anses som egnet på tidspunktet han fikk risiko for tingen. Jeg henviser til Videospillerdommen
+(HR-1998-24-A). Kjøper fikk mehold ettersom det ble antatt at mangelen lå før overtagelse av tingen og dermed før risiko
+gikk over på kjøper.
+Derfor konstaterer vi at det ikke foreligger en mangel ved telefonen.
+2. Forutsatt at det foreligger en mangel, har Peder krav på heving og/eller erstatning fra Bruktmobil AS?
+Jf. kjl. § 39 første ledd kan kjøperen heve kjøpet dersom mangelen medfører vesentlig kontraktsbrudd.
+Er det vesentlig kontraktsbrudd? På hyllen hvor telefonen lå i forretningslokalet lå det en henvisning til produsentes
+hjemmeside med instruksjon om hvordan kjøperen skulle håndtere telefonen. Er dette tilstrekkelig? Instruksjonen om å
+ikke lade om natten kunne kommet enda klarere fram og mer tydelig for Peder. At det står en henvisning til instruksene i
+forretningslokalet kan antas å ikke være tilstrekkelig. Under normale forutsetninger ville man også få manual til en telefon
+man kjøper. Dette var en brukt mobil som kan gjøre en slik manual ikke like tilgjengelig, men en viktig advarsel som kan
+påføre farlige sikkerhetsmessige utfall kan ses på som måtte være mer tilgjengelig for kjøper.
+Man kan også tale for at en mobil bør klare å ikke ta fyr fordi den lader en natt, og produsenter bør lage sikkerhetsmessige
+forsvarlige produkter.
+Imidlertid, med tanke på hva en utenforstående person ville ment, mener jeg det er et velkjent fenomen at man ikke bør
+lade om natten. Selv om det ikke er sannsynlig, er det et ansvar på vedkommende på hvordan en håndterer produktet. Det
+var en henvisning til instrukser, til tross for at dette kunne vært markert bedre, som Peder kunne ha sjekket på
+hjemmesiden. Det er altså både gitt oppmuntring om instrukser og det er et allmennkjent fenomen at du ikke skal lade om
+natten. Dette til tross for, som Peder anfører, at "ingen overvåker telefonen sin på den måten". Det vil etter mitt syn bli en
+ansvarsfraskrivelse.
+Jeg kommer fram til at Peder ikke har krav på å heve kjøpet.
+Spørsmålet er deretter om Peder kan kreve erstatning.
+Etter kjl. § 40 kan kjøper kreve erstatning for det tap han lider som følge av mangel ved tingen. Det regnes imidlertid ikke
+for indirekte tap, jf. kjl. § 40 andre ledd.
+Jf. kjl. § 67 første ledd påpekes det at erstatningens omfang skal svare til tapet som den annen part er påført som følge av
+kontraktsbruddet, så lenge det er et tap man med rimelighet kunne forutsett.
+Når mobilen blir ødelagt på grunn av det foreligger en mangel ved den, er det et tap man kan forutse. Jeg mener også at
+man med "rimelighet" kan forutse at en lader blir ødelagt i forbindelse med en mangel ved telefonen.
+Jf. kjl. § 67 andre ledd bokstav a regnes indirekte tap som følge av bortfalt omsetning. Peder påberoper seg seg erstatning
+for dette ettersom han holdt butikken stengt i fire dager. Han kunne ha solgt biler på parkeringsplassen utenfor sitt lokalet,
+men valgte å ikke gjøre dette grunnet bekymring vedrørende renommé. Å selge biler utenfor lokalet sitt i fire dager er ikke
+noe jeg ser som et forsvarlig nok argument for skade av renommé. Parten som påberoper kontraktsbrudd skal ved rimelige
+tiltak begrense sitt tap, jf. kjl. § 70 første ledd, noe han ikke gjorde. Jeg henviser til Knutelindommen (Rt-1970-1059) hos
+Høyesterett der kjøper ikke fikk full erstatning ettersom han kunne begrenset tapet sitt.
+Et utdatert elektrisk anlegg beror heller ikke på kontraktsbrudd på selgerens side og er et ansvar som ligger hos Peder.
+Dermed er ikke dette vilkåret oppfylt, jf. kjl. § 40 tredje ledd bokstav a.
+Jf. § 70 andre ledd kan erstatning settes ned dersom den vil virke urimelig for den ansvarlige part ut fra tapets størrelse i
+forhold til det tap som som vanligvis oppstår i liknende tilfeller. Dette taler for at Bruktmobil heller ikke har ansvaret for
+delen av det elektriske anlegget som kostet 30.000 kr å reparere, selv om dette ble direkte berørt av hendelsen. Et kjøp på
+4000 og deretter få et erstatningskrav på 30.000 vil etter min mening virke urimelig. Det er en nesten en åttedobling av
+beløpet Peder betalte for produktet, og kan ikke anses som noe som vanligvis oppstår.
+Det kan ikke regnes som et tap som "vanligvis oppstår" at man må bytte ut et elektrisk anlegg, påfølgende
+elektrokostnader, mat til en verdi av 20.000 kr og stenging av butikk grunnet en mobiltelefon til 4000 kr. Det vil etter mitt
+syn virke urimelig at Bruktmobil AS skal påta seg erstatning for dette.
+Jeg kommer fram til at Peder kan kreve erstatning for mobilen og laderen, men ikke for det resterende tap.
+3. Foreligger det et kontraktsbrudd i kontrakten mellom Hans Tastad og Bruktmobil AS?
+Marte anfører at Hans har brutt kontrakten med Bruktmobil fordi han byttet til en billigere batterivariant uten å snakke
+med Marte eller andre i firmaet først.
+Det fremgår ikke av noen avtale at dette skal bemerkes til Bruktmobil. Det eneste som fremgår av avtalen er at han skal få
+500 kr per mobiltelefon han reparerer.
+Det foreligger ikke noe kontraktsbrudd i kontrakten mellom Hans Tastad og Bruktmobil AS.
+4. Forutsatt at det foreligger kontraktsbrudd, er Hans Tastad erstaningsansvarlig overfor Bruktmobil AS?
+Vi kan se på mailen som Hans sendte til Bruktmobil som en form for et tilbud. Avtaleloven kommer til anvendelse.
+I noen sammenhenger, f.eks. sedvane i forbindelse med gjentatte, faste avtaler mellom to parter, kan passitivitet anses
+som aksept. Siden forholdet mellom Marte og Hans innebærer en fast avtale og det virker som et gunstig avtalevilkår for
+Hans som mener pengeytelsen er relativt lav, kan en anse det som et rimelig vilkår. Når forretningen ikke svarer og de har
+en fast avtale, og Hans har påpekt at han anser passitivitet som aksept i denne sammenheng som de ikke sier seg imot, kan
+gjøre at Hans regner med at vilkåret er gjeldende.
+Her er det imidlertid snakk om et tilbud av et avtalevilkår som ikke er snakket om mellom partene fra før. Jf. avtaleloven § 8
+vil, til tross for at tilbyder har erklært at han anser taushet som aksept, eller det fremgår av forholdet at en ikke venter
+uttrykkelig svar, mottaker være pliktig til å svare for at avtalen skal være bindende.
+Hans sitt ansvarsfraskrivelse kommer da ikke til anvendelse, og han er erstatningsansvarlig.

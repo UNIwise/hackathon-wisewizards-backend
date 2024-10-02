@@ -3,7 +3,6 @@ package controllers
 import (
 	"context"
 	"encoding/json"
-	"flag"
 	"fmt"
 	"log"
 	"net/http"
@@ -15,17 +14,16 @@ import (
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/config"
 	"github.com/aws/aws-sdk-go-v2/service/bedrockruntime"
-	"github.com/awsdocs/aws-doc-sdk-examples/gov2/bedrock-runtime/scenarios"
-	"github.com/awsdocs/aws-doc-sdk-examples/gov2/demotools"
 	"github.com/labstack/echo"
 )
 
 type handlePromptRequest struct {
-	Prompt string `json:"prompt" validate:"required"`
+	Prompt string `json:"prompt"`
+	Grade  string `json:"grade" validate:"required"`
 }
 
 type dostuffResponse struct {
-	ID string `json:"id"`
+	Response string `json:"response"`
 }
 
 type ClaudeRequest struct {
@@ -46,14 +44,10 @@ func (handlers *Handlers) dostuff(ctx contexts.AuthenticatedContext) error {
 		return echo.ErrBadRequest
 	}
 
-	// bedrock()
-	callClaude(req.Prompt)
-
-	ctx.Log.Info("Create Flow success")
+	response := callClaude(req.Grade)
 
 	data := &dostuffResponse{
-		// ID: flow.ID,
-		ID: req.Prompt,
+		Response: response,
 	}
 
 	return ctx.JSON(http.StatusOK, &helpers.APIResponse{
@@ -62,66 +56,80 @@ func (handlers *Handlers) dostuff(ctx contexts.AuthenticatedContext) error {
 	})
 }
 
-func bedrock() {
-	scenarioMap := map[string]func(sdkConfig aws.Config){
-		"invokemodels": runInvokeModelsScenario,
-	}
-	choices := make([]string, len(scenarioMap))
-	choiceIndex := 0
-	for choice := range scenarioMap {
-		choices[choiceIndex] = choice
-		choiceIndex++
-	}
-	scenario := flag.String(
-		"scenario", "",
-		fmt.Sprintf("The scenario to run. Must be one of %v.", choices))
-
-	// var region = flag.String("region", "us-east-1", "The AWS region")
-	var region = aws.String("eu-central-1")
-	flag.Parse()
-
-	fmt.Printf("Using AWS region: %s\n", *region)
-
-	if runScenario, ok := scenarioMap[*scenario]; !ok {
-		fmt.Printf("'%v' is not a valid scenario.\n", *scenario)
-		flag.Usage()
-	} else {
-		sdkConfig, err := config.LoadDefaultConfig(context.Background(), config.WithRegion(*region))
-		if err != nil {
-			log.Fatalf("unable to load SDK config, %v", err)
-		}
-
-		log.SetFlags(0)
-		runScenario(sdkConfig)
-	}
-}
-
-func runInvokeModelsScenario(sdkConfig aws.Config) {
-	scenario := scenarios.NewInvokeModelsScenario(sdkConfig, demotools.NewQuestioner())
-	scenario.Run()
-}
-
-func callClaude(prompt string) {
+func callClaude(grade string) string {
 	var region = aws.String("eu-central-1")
 	sdkConfig, err := config.LoadDefaultConfig(context.Background(), config.WithRegion(*region))
 	if err != nil {
 		fmt.Println("Couldn't load default configuration. Have you set up your AWS account?")
 		fmt.Println(err)
-		return
+		return "Error"
 	}
 
 	client := bedrockruntime.NewFromConfig(sdkConfig)
 
-	modelId := "anthropic.claude-v2"
+	modelId := "anthropic.claude-v2:1"
 
+	file1, err := os.ReadFile("guideline1.txt")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	file2, err := os.ReadFile("guideline2.txt")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	submission, err := os.ReadFile("submission.txt")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// Old prompt
 	// Anthropic Claude requires you to enclose the prompt as follows:
-	prefix := "Human: "
-	postfix := "\n\nAssistant:"
-	wrappedPrompt := prefix + prompt + postfix
+	// prompt := `You are an assessor, evaluating a student's submission.
+	// 	The student received the final exam result: ` + grade + `.
+	// 	The student's whole submission is also attached.
+	// 	Attached are some guidelines for how to evaluate the student submission, or feedback from another assessor.
+
+	prompt := `
+		Here are some documents to use as reference for the following questions:
+
+		<documents>
+			<document index="1">
+				<document_title>Guideline</document_title>
+				<document_content>
+				` + string(file1) + `
+				</document_content>
+			</document>
+			<document index="2">
+				<document_title>Guideline</document_title>
+				<document_content>
+				` + string(file2) + `
+				</document_content>
+			</document>
+			<document index="3">
+				<document_title>Student submission</document_title>
+				<document_content>
+				` + string(submission) + `
+				</document_content>
+			</document>
+		</documents>
+
+		The student's grade for this submission is: ` + grade + `
+		Based on the document and the grade provided, please analyze the student's performance. Consider the following:
+		1. What are the key strengths and weaknesses of the student's submission?
+		2. How does the grade align with the submission content?
+		3. What recommendations would you make for the student's future improvement?
+
+		As an assessor, provide a detailed explanation (in bullet form) for why that specific grade was given to the student, based on the attached documents.
+		Please ensure your explanation covers both strengths and areas for improvement in the student's work.
+	`
+
+	wrappedPrompt := "Human: " + prompt + "\n\nAssistant:"
 
 	request := ClaudeRequest{
 		Prompt:            wrappedPrompt,
-		MaxTokensToSample: 200,
+		MaxTokensToSample: 2000,
 	}
 
 	body, err := json.Marshal(request)
@@ -154,6 +162,6 @@ func callClaude(prompt string) {
 	if err != nil {
 		log.Fatal("failed to unmarshal", err)
 	}
-	fmt.Println("Prompt:\n", prompt)
-	fmt.Println("Response from Anthropic Claude:\n", response.Completion)
+	fmt.Println("Anthropic claude responded.")
+	return response.Completion
 }

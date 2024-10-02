@@ -1,0 +1,107 @@
+JUR 34101 Innføring i kontraktsrett
+Vekt: Eksamen teller 100 % av endelig karakter i JUR 3410
+Antall sider i oppgaven: 4 sider inkl. forsiden
+Oppgaven besvares: Individuelt
+Skriftstørrelse: 12
+Formelle krav
+Tillatte hjelpemidler:
+• Digital ressurs: Lovdata Pro (Digital Eksamensmodus)
+• Lover og forskrifter, inkludert særtrykk av lover og utkast til nye lover
+Lykke til!
+Marte Kirkerud eide et lite selskap som drev med kjøp og salg av elektronikk. Selskapet het Bruktmobil
+AS (heretter Bruktmobil). Martes forretningsidé var å kjøpe inn ikke-fungerende brukt elektronikk, i
+første rekke mobiltelefoner, og få gjenstandene reparert, for så å selge dem videre til en lavere pris enn
+et tilsvarende, nytt produkt. Bruktmobil samarbeidet med Hans Tastad, som var pensjonert
+elektroingeniør, og som gjerne påtok seg oppdrag med å reparere mobiltelefoner. Bruktmobil hadde en
+muntlig avtale med Hans, som pleide å få 500 kroner per mobiltelefon han reparerte. Litt avhengig av
+merke, kjøpte Bruktmobil telefonene for en tusenlapp og solgte de nyreparerte telefonene for mellom 3
+000 og 5 000 kroner.
+Hans hadde lenge uttrykkelig sagt at den betalingen han fikk var relativt lav. På grunn av den lave
+betalingen ville Hans i alle fall være sikker på at han ikke hadde noe ansvar i tilfelle noe skulle gå galt
+med mobiltelefonene. Den 1. oktober 2022 sendte Hans en e-post til Bruktmobil med følgende tekst:
+«Som kompensasjon for lav betaling per enhet jeg reparerer finner jeg det rimelig at jeg ikke
+skal være ansvarlig dersom mobiltelefoner etter reparasjon og salg viser seg å ha mangler. En
+skriftlig aksept av dette avtalevilkåret per e-post imøteses innen 1. november 2022. Hvis jeg
+intet hører, anser jeg vilkåret for å være godtatt. Hvis dere ikke godtar dette avtalevilkåret, vil
+jeg si opp vårt avtaleforhold.»
+Bruktmobil svarte ikke på e-posten fra Hans innen fristen, men fortsatte å levere telefoner til reparasjon,
+som om ingen ting hadde hendt. Hans fortsatte også å ta imot telefoner uten å protestere eller si opp
+avtalen.
+Peder Ås trengte en ny smarttelefon til å bruke i jobben sin som bruktbilforhandler. Han solgte biler
+under sloganet «brukt er best», og tenkte at han fikk leve som han lærte. Den 20. november 2022 kjøpte
+han derfor en brukt telefon av Bruktmobil. Han valgte en relativt fin modell og betalte 4 000 kroner.
+Telefonen lå på en butikkhylle hvor det stod et skilt som sa «Som nye». På hyllen var det også en
+henvisning til produsentens hjemmeside med instruksjon om hvordan kjøpere skulle håndtere telefonen.
+Peder, som hadde hatt samme telefonmerke tidligere, brydde seg ikke med å gå inn på hjemmesiden.
+Han tok med seg telefonen på jobb og brukte den til å snakke med kunder resten av dagen.
+Da dagen var over, var batteriet helt tomt. Peder la derfor mobiltelefonen til lading mens han stengte
+butikken. Det hadde blitt sent, så Peder måtte skynde seg hjem til middag. Da han kom hjem, oppdaget
+han at han hadde glemt telefonen på jobben, men tenkte ikke mer på det siden han skulle tilbake på jobb
+morgenen etter. Den dagen skulle bruktbilfirmaet dessuten ha firmafest, noe han gledet seg til.
+Da Peder kom på jobb neste dag, viste det seg at telefonen hadde tatt fyr i løpet av natten, og både
+telefonen og laderledningen var helt ødelagt. Heldigvis hadde ikke brannen spredt seg, fordi Peder hadde
+lagt telefonen i en metallskål på et bord. Skålen hadde beskyttet bordet og telefonen. Sikringene i
+butikken hadde derimot gått, som følge av varmeutviklingen fra laderledningen. Kjøleskapet, som var
+fullt av hummer, reker og hvitvin til firmafesten, hadde vært uten strøm i mange timer. Derfor ble all
+maten ødelagt og uspiselig. Maten hadde kostet 20 000 kroner i innkjøp.
+Etter undersøkelser ble det avklart at årsaken til varmeutviklingen var en feil på batteriet som ble
+benyttet da telefonen ble reparert. Hans Tastad hadde kommet over en ny type telefonbatterier som var
+billigere enn de han vanligvis brukte. Batteriene var på tidspunktet for salget godkjente av norske
+myndigheter og det fantes ingen informasjon om at de ikke kunne brukes til den aktuelle typen
+mobiltelefoner. Etter hendelsen hvor telefonen tok fyr, hadde det samme skjedd med andre
+mobiltelefoner flere steder i landet. Myndighetene hadde derfor grepet inn, og nå var batterier som dette
+ikke lenger godkjente for mobiltelefoner.
+En tilkalt elektriker slo fast at det elektriske anlegget måtte byttes ut. For det første var anlegget knyttet
+til kursen for den stikkontakten ladekabelen var koblet til, ødelagt. Det ville koste 30 000 kroner å
+reparere denne delen av anlegget. For det andre hadde elektrikeren oppdaget at hele det elektriske
+anlegget var utdatert, og trengte utskiftning i henhold til gjeldende forskrifter. Utskiftningen av det
+elektriske anlegget ville koste 70 000 kroner.
+Peders firma måtte holde stengt i fire dager mens elektroarbeidene pågikk. I denne perioden ble det ikke
+solgt noen biler, mens det normalt ville blitt solgt åtte biler i en firedagers-periode. Peder hadde vurdert
+å selge biler fra parkeringsplassen utenfor, men kom etter en samlet vurdering til at dette ville gå utover
+butikkens renommé. Han valgte derfor i stedet å holde butikken stengt. Sammenholdt med årsregnskapet
+fant Peder at tap som skyldes bortfall av kontrakter om salg av bruktbiler i denne perioden utgjorde
+240 000 kroner.
+Peder Ås reiste krav overfor Bruktmobil om at han ville heve kjøpet av mobiltelefonen. Han krevde
+videre erstatning for de utgifter han hadde hatt som følge av at mobiltelefonen tok fyr. Peder regnet ut
+at han hadde et samlet tap på 100 000 kroner i elektrokostnader og 240 000 kroner i tapte inntekter, til
+sammen 340 000 kroner. Endelig krevet Peder erstatning for den ødelagte maten, som hadde kostet 20
+000 kroner. Peder, som følte seg krenket av hendelsen, krevet også erstattet laderen til mobiltelefonen,
+som hadde kostet 399 kroner i innkjøp.
+Dersom Peder ikke fikk heve kjøpet av mobiltelefonen, krevet han subsidiært erstatning for tapet av
+denne, 4 000 kroner.
+Peder anførte at batteriet som Bruktmobil hadde brukt, ikke var egnet til mobiltelefoner. Tap som følge
+av feil batteri i telefonen måtte være Bruktmobils ansvar, mente Peder.
+Bruktmobil motsatte seg kravene. Selskapet hevdet prinsipalt at telefonen var i orden, med godkjent
+batteri, da den ble levert til Peder og at selskapet etter dette tidspunktet ikke hadde noe ansvar for den
+Det stod dessuten klart i instruksene på hjemmesiden til produsenten at telefonen ikke måtte lades uten
+tilsyn. Det burde Peder ha innrettet seg etter. Det finnes en risiko ved lading av alle elektriske produkter,
+og det var Peders eget ansvar at han hadde glemt telefonen under lading på jobben.
+Så lenge det ikke forelå noen mangel ved telefonen, hevdet Bruktmobil at det ikke kunne være aktuelt
+å betale erstatning, og under alle omstendigheter var erstatningspostene ikke dekningsmessige.
+Heving kunne ikke komme på tale.
+Til påstanden om at Peder burde ha hatt tilsyn med telefonen når den ladet, svarte Peder litt oppgitt at «
+… det er jo ingen som overvåker telefonen sin på den måten».
+Bruktmobil henvendte seg for sikkerhets skyld til Hans Tastad og varslet om at dersom selskapet ble
+ansvarlig for å betale noen av Peders erstatningskrav, ville det kreve erstatning for tilsvarende beløp fra
+Hans, som var den som egentlig hadde gjort feilen. Han hadde byttet til en billigere batterivariant uten
+å snakke med Marte eller andre i Bruktmobil først. Hans hadde på denne måten brutt kontrakten med
+Bruktmobil.
+Hans Tastad ble helt forskrekket over Bruktmobils krav. Han hadde tatt på seg å hjelpe Marte av
+gammelt vennskap og for å tjene en ekstra slant. Det kunne da ikke være meningen at han skulle påta
+seg ansvar i en slik størrelsesorden. Han hadde ikke noe firma og ikke noen ansvarsforsikring. Dette
+tapet måtte Bruktmobil bære, om det ble aktuelt, mente Hans. Han ville gå personlig konkurs dersom
+han måtte betale det fulle erstatningskravet på i verste fall 364 399 kroner.
+Hans Tastad viste også til e-posten med ansvarsfraskrivelse, og påpekte at fristen hadde gått ut uten at
+Bruktmobil hadde svart. Etter dette måtte Bruktmobil være bundet av ansvarsfraskrivelsen.
+Løs de to tvistene mellom Peder Ås og Bruktmobil AS og mellom Bruktmobil AS og Hans Tastad basert
+på avtalene mellom partene. Følgende spørsmål skal besvares
+1. Foreligger det en mangel ved salget fra Bruktmobil AS til Peder Ås?
+2. Forutsatt at det foreligger en mangel, har Peder krav på heving av kjøpet og/eller erstatning fra
+Bruktmobil AS?
+3. Foreligger det kontraktsbrudd i kontrakten mellom Hans Tastad og Bruktmobil AS?
+4. Forutsatt at det foreligger kontraktsbrudd, er Hans Tastad erstatningsansvarlig overfor
+Bruktmobil AS?
+For avgjørelsen av spørsmål 4. skal det tas stilling til om Hans Tastad kan gjøre gjeldende en
+ansvarsfraskrivelse.
+Produktansvarsloven skal ikke behandles.
