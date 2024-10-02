@@ -1,0 +1,30 @@
+openapi: "3.0.0"
+
+info:
+  title: YOU_SERVICE
+  version: 1.0.0
+  description: YOU_SERVICE_DESCRIPTION
+
+servers:
+  - url: https://api.eu.wiseflow.io/YOU_SERVICE
+    description: Production
+  - url: https://api.stage.eu.wiseflow.io/YOU_SERVICE
+    description: Staging
+  - url: https://api.test.eu.wiseflow.io/YOU_SERVICE
+    description: Testing
+  - url: "{scheme}://{host}{base}"
+    description: Custom
+    variables:
+      scheme:
+        default: "http"
+        enum:
+          - "http"
+          - "https"
+      host:
+        default: "localhost:8080"
+      base:
+        default: ""
+
+components: {}
+
+paths: {}

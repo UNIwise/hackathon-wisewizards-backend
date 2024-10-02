@@ -1,0 +1,36 @@
+// Style guide:
+// https://developers.google.com/protocol-buffers/docs/style
+
+syntax = "proto3";
+
+package proto.flow.v1;
+
+option go_package = "pkg/proto/v1";
+
+service FlowService {
+    rpc CreateFlow(CreateFlowRequest) returns (CreateFlowResponse) {}
+}
+
+// Requests
+
+message CreateFlowRequest {
+    string title = 1;
+    uint64 licenseId = 2;
+}
+
+message CreateFlowQueueRequest {
+    uint64 id = 1;
+    string title = 2;
+    string responseSubject = 3;
+}
+
+// Responses
+
+message CreateFlowResponse {
+    uint64 id = 1;
+}
+
+message CreateFlowQueueResponse {
+    uint64 id = 1;
+    string error = 2;
+}

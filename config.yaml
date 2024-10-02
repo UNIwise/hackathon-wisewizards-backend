@@ -1,0 +1,55 @@
+log:
+  level: info
+  format: text
+
+database:
+  dsn: wiseflow:wflocaldb@tcp(localhost:3306)/wiseflow?charset=utf8&parseTime=True
+  debug: false
+
+http:
+  port: 8089
+
+grpc:
+  port: 50051
+
+nats:
+  dsn: nats://localhost:4222
+  cluster: test-cluster
+  consumer_id: test-consumer
+  queue_group: test-queue-group
+  durable_name: test-durable-name
+  ack_wait_timeout: 10s
+  subscribers_count: 5
+
+rabbitmq:
+  url: amqp://guest:guest@localhost:5672//
+  max_retries: 5
+  initial_interval: 5s
+  multiplier: 4
+  max_elapsed_time: 30m
+  max_interval: 22m
+
+nats_worker:
+  flow_created_subject: "wiseflow.core.flow.created"
+
+rabbitmq_worker:
+  queue_flow_created: flow-created
+  queue_flow_created_response: flow-created.response
+
+  routing_key_flow_created: flow-created
+  routing_key_flow_created_response: flow-created.response
+
+  topic_flow_created: flow-created
+  topic_flow_created_response: flow-created.response
+
+prometheus:
+  enabled: false
+  port: 9090
+  path: /metrics
+
+health:
+  port: 8081
+
+authorization:
+  dsn: http://localhost:8181/v1/data
+  disabled: true
