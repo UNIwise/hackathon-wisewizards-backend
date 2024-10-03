@@ -29,7 +29,8 @@ const (
 	modelARN            = "arn:aws:bedrock:eu-central-1::foundation-model/anthropic.claude-3-5-sonnet-20240620-v1:0"
 	regularModelARN     = "anthropic.claude-v2:1"
 	knowledgeBasePrompt = `Please provide detailed guidelines for evaluating a student's submission for this specific exam,
-	based on the assignment and guideline documents. Make sure to list the required knowledge and skill objectives.
+	based on the assignment documents (where purpose is assignment), and guideline documents (where purpose is marking_guidance).
+	Make sure to list the required knowledge and skill objectives.
 	Start by listing the names of the available documents.`
 )
 
