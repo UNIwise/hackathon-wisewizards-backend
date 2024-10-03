@@ -9,6 +9,7 @@ require (
 	github.com/ThreeDotsLabs/watermill-nats v1.0.7
 	github.com/aws/aws-sdk-go-v2 v1.31.0
 	github.com/aws/aws-sdk-go-v2/config v1.27.39
+	github.com/aws/aws-sdk-go-v2/service/bedrockagentruntime v1.21.0
 	github.com/aws/aws-sdk-go-v2/service/bedrockruntime v1.16.2
 	github.com/go-gormigrate/gormigrate/v2 v2.1.2
 	github.com/go-playground/validator v9.31.0+incompatible
@@ -47,7 +48,7 @@ require (
 require (
 	filippo.io/edwards25519 v1.1.0 // indirect
 	github.com/ThreeDotsLabs/watermill-amqp v1.1.4
-	github.com/aws/aws-sdk-go-v2/aws/protocol/eventstream v1.6.4 // indirect
+	github.com/aws/aws-sdk-go-v2/aws/protocol/eventstream v1.6.5 // indirect
 	github.com/aws/aws-sdk-go-v2/internal/configsources v1.3.18 // indirect
 	github.com/aws/aws-sdk-go-v2/internal/endpoints/v2 v2.6.18 // indirect
 	github.com/aws/aws-sdk-go-v2/internal/v4a v1.3.17 // indirect

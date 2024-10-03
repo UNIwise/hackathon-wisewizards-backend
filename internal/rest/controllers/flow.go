@@ -15,9 +15,22 @@ import (
 	"github.com/UNIwise/go-template/internal/rest/helpers"
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/config"
+	"github.com/aws/aws-sdk-go-v2/service/bedrockagentruntime"
+	"github.com/aws/aws-sdk-go-v2/service/bedrockagentruntime/types"
+	bedrocktypes "github.com/aws/aws-sdk-go-v2/service/bedrockruntime/types"
+
 	"github.com/aws/aws-sdk-go-v2/service/bedrockruntime"
-	"github.com/aws/aws-sdk-go-v2/service/bedrockruntime/types"
 	"github.com/labstack/echo"
+)
+
+const (
+	awsRegion           = "eu-central-1"
+	knowledgeBaseID     = "T4RVHJL8EL"
+	modelARN            = "arn:aws:bedrock:eu-central-1::foundation-model/anthropic.claude-3-5-sonnet-20240620-v1:0"
+	regularModelARN     = "anthropic.claude-v2:1"
+	knowledgeBasePrompt = `Please provide detailed guidelines for evaluating a student's submission for this specific exam,
+	based on the assignment and guideline documents. Make sure to list the required knowledge and skill objectives.
+	Start by listing the names of the available documents.`
 )
 
 // Event represents Server-Sent Event.
@@ -120,7 +133,24 @@ func (handlers *Handlers) dostuff(ctx contexts.AuthenticatedContext) error {
 		return echo.ErrBadRequest
 	}
 
-	streamResp, err := callClaude(req.StudentName, req.Grade)
+	var region = aws.String(awsRegion)
+	sdkConfig, err := config.LoadDefaultConfig(context.Background(), config.WithRegion(*region))
+	if err != nil {
+		fmt.Println("Couldn't load default configuration. Have you set up your AWS account?")
+		fmt.Println(err)
+		return err
+	}
+
+	knowledgeBaseResponse, err := callKnowledgeBase(context.Background(), sdkConfig)
+	if err != nil {
+		log.Fatal("failed to call knowledgebase", err)
+		return err
+	}
+
+	knowledgeBaseString := *knowledgeBaseResponse.Output.Text
+	fmt.Println("Knowledgebase response: ", knowledgeBaseString)
+
+	streamResp, err := callClaude(sdkConfig, req.StudentName, req.Grade, knowledgeBaseString)
 
 	if err != nil {
 		return ctx.JSON(http.StatusInternalServerError, &helpers.APIResponse{
@@ -142,12 +172,13 @@ func (handlers *Handlers) dostuff(ctx contexts.AuthenticatedContext) error {
 	for {
 		event := <-events
 		if event != nil {
-			if v, ok := event.(*types.ResponseStreamMemberChunk); ok {
+			if v, ok := event.(*bedrocktypes.ResponseStreamMemberChunk); ok {
 				var response ClaudeResponse
 				if err := json.Unmarshal(v.Value.Bytes, &response); err != nil {
 					return err
 				}
 
+				fmt.Print(string(response.Completion))
 				if resp, err := json.Marshal(response); err != nil {
 					return err
 				} else {
@@ -158,7 +189,7 @@ func (handlers *Handlers) dostuff(ctx contexts.AuthenticatedContext) error {
 
 				w.Flush()
 
-			} else if v, ok := event.(*types.UnknownUnionMember); ok {
+			} else if v, ok := event.(*bedrocktypes.UnknownUnionMember); ok {
 				fmt.Print(v.Value)
 			}
 		} else {
@@ -169,30 +200,10 @@ func (handlers *Handlers) dostuff(ctx contexts.AuthenticatedContext) error {
 	return nil
 }
 
-func callClaude(studentName string, grade string) (*bedrockruntime.InvokeModelWithResponseStreamOutput, error) {
+func callClaude(sdkConfig aws.Config, studentName string, grade string, knowledgeBaseString string) (*bedrockruntime.InvokeModelWithResponseStreamOutput, error) {
 	fmt.Println("Calling Anthropic Claude...")
 
-	var region = aws.String("eu-central-1")
-	sdkConfig, err := config.LoadDefaultConfig(context.Background(), config.WithRegion(*region))
-	if err != nil {
-		fmt.Println("Couldn't load default configuration. Have you set up your AWS account?")
-		fmt.Println(err)
-		return nil, err
-	}
-
 	client := bedrockruntime.NewFromConfig(sdkConfig)
-
-	modelId := "anthropic.claude-v2:1"
-
-	file1, err := os.ReadFile("guideline1.txt")
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	file2, err := os.ReadFile("guideline2.txt")
-	if err != nil {
-		log.Fatal(err)
-	}
 
 	submission, err := os.ReadFile("submission.txt")
 	if err != nil {
@@ -211,18 +222,11 @@ func callClaude(studentName string, grade string) (*bedrockruntime.InvokeModelWi
 
 		<documents>
 			<document index="1">
-				<document_title>Guideline</document_title>
+				<document_title>Assessor guidelines</document_title>
 				<document_content>
-				` + string(file1) + `
+				` + knowledgeBaseString + `
 				</document_content>
-			</document>
 			<document index="2">
-				<document_title>Guideline</document_title>
-				<document_content>
-				` + string(file2) + `
-				</document_content>
-			</document>
-			<document index="3">
 				<document_title>Student submission</document_title>
 				<document_content>
 				` + string(submission) + `
@@ -236,7 +240,6 @@ func callClaude(studentName string, grade string) (*bedrockruntime.InvokeModelWi
 		2. How does the grade align with the submission content?
 		3. What recommendations would you make for the student's future improvement?
 		4. Please refer to the student by the name: ` + studentName + `
-
 
 		As an assessor, provide a detailed explanation (in bullet form) for why that specific grade was given to the student, based on the attached documents.
 		Please ensure your explanation covers both strengths and areas for improvement in the student's work.
@@ -255,7 +258,7 @@ func callClaude(studentName string, grade string) (*bedrockruntime.InvokeModelWi
 	}
 
 	resp, err := client.InvokeModelWithResponseStream(context.Background(), &bedrockruntime.InvokeModelWithResponseStreamInput{
-		ModelId:     aws.String(modelId),
+		ModelId:     aws.String(regularModelARN),
 		ContentType: aws.String("application/json"),
 		Body:        body,
 	})
@@ -265,7 +268,7 @@ func callClaude(studentName string, grade string) (*bedrockruntime.InvokeModelWi
 		if strings.Contains(errMsg, "no such host") {
 			fmt.Printf("Error: The Bedrock service is not available in the selected region. Please double-check the service availability for your region at https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/.\n")
 		} else if strings.Contains(errMsg, "Could not resolve the foundation model") {
-			fmt.Printf("Error: Could not resolve the foundation model from model identifier: \"%v\". Please verify that the requested model exists and is accessible within the specified region.\n", modelId)
+			fmt.Printf("Error: Could not resolve the foundation model from model identifier: \"%v\". Please verify that the requested model exists and is accessible within the specified region.\n", regularModelARN)
 		} else {
 			fmt.Printf("Error: Couldn't invoke Anthropic Claude. Here's why: %v\n", err)
 		}
@@ -273,14 +276,24 @@ func callClaude(studentName string, grade string) (*bedrockruntime.InvokeModelWi
 	}
 
 	return resp, nil
+}
 
-	// var response ClaudeResponse
+func callKnowledgeBase(ctx context.Context, sdkConfig aws.Config) (*bedrockagentruntime.RetrieveAndGenerateOutput, error) {
+	fmt.Println("Calling KnowledgeBase...")
+	bedrockClient := bedrockagentruntime.NewFromConfig(sdkConfig)
 
-	// err = json.Unmarshal(result.Body, &response)
+	input := &bedrockagentruntime.RetrieveAndGenerateInput{
+		Input: &types.RetrieveAndGenerateInput{
+			Text: aws.String(knowledgeBasePrompt),
+		},
+		RetrieveAndGenerateConfiguration: &types.RetrieveAndGenerateConfiguration{
+			Type: types.RetrieveAndGenerateTypeKnowledgeBase,
+			KnowledgeBaseConfiguration: &types.KnowledgeBaseRetrieveAndGenerateConfiguration{
+				KnowledgeBaseId: aws.String(knowledgeBaseID),
+				ModelArn:        aws.String(modelARN),
+			},
+		},
+	}
 
-	// if err != nil {
-	// 	log.Fatal("failed to unmarshal", err)
-	// }
-	// fmt.Println("Anthropic claude responded.")
-	// return response.Completion
+	return bedrockClient.RetrieveAndGenerate(ctx, input)
 }
