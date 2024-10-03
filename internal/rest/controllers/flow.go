@@ -1,15 +1,12 @@
 package controllers
 
 import (
-	"bytes"
 	"context"
 	"encoding/json"
 	"fmt"
-	"io"
 	"log"
 	"net/http"
 	"os"
-	"strings"
 
 	"github.com/UNIwise/go-template/internal/rest/contexts"
 	"github.com/UNIwise/go-template/internal/rest/helpers"
@@ -17,9 +14,9 @@ import (
 	"github.com/aws/aws-sdk-go-v2/config"
 	"github.com/aws/aws-sdk-go-v2/service/bedrockagentruntime"
 	"github.com/aws/aws-sdk-go-v2/service/bedrockagentruntime/types"
+	"github.com/aws/aws-sdk-go-v2/service/bedrockruntime"
 	bedrocktypes "github.com/aws/aws-sdk-go-v2/service/bedrockruntime/types"
 
-	"github.com/aws/aws-sdk-go-v2/service/bedrockruntime"
 	"github.com/labstack/echo"
 )
 
@@ -27,87 +24,17 @@ const (
 	awsRegion           = "eu-central-1"
 	knowledgeBaseID     = "T4RVHJL8EL"
 	modelARN            = "arn:aws:bedrock:eu-central-1::foundation-model/anthropic.claude-3-5-sonnet-20240620-v1:0"
-	regularModelARN     = "anthropic.claude-v2:1"
+	regularModelARN     = "anthropic.claude-3-5-sonnet-20240620-v1:0"
 	knowledgeBasePrompt = `Please provide detailed guidelines for evaluating a student's submission for this specific exam,
 	based on the assignment documents (where purpose is assignment), and guideline documents (where purpose is marking_guidance).
 	Make sure to list the required knowledge and skill objectives.
 	Start by listing the names of the available documents.`
 )
 
-// Event represents Server-Sent Event.
-// SSE explanation: https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#event_stream_format
-type Event struct {
-	// ID is used to set the EventSource object's last event ID value.
-	ID []byte
-	// Data field is for the message. When the EventSource receives multiple consecutive lines
-	// that begin with data:, it concatenates them, inserting a newline character between each one.
-	// Trailing newlines are removed.
-	Data []byte
-	// Event is a string identifying the type of event described. If this is specified, an event
-	// will be dispatched on the browser to the listener for the specified event name; the website
-	// source code should use addEventListener() to listen for named events. The onmessage handler
-	// is called if no event name is specified for a message.
-	Event []byte
-	// Retry is the reconnection time. If the connection to the server is lost, the browser will
-	// wait for the specified time before attempting to reconnect. This must be an integer, specifying
-	// the reconnection time in milliseconds. If a non-integer value is specified, the field is ignored.
-	Retry []byte
-	// Comment line can be used to prevent connections from timing out; a server can send a comment
-	// periodically to keep the connection alive.
-	Comment []byte
-}
-
-// MarshalTo marshals Event to given Writer
-func (ev *Event) MarshalTo(w io.Writer) error {
-	// Marshalling part is taken from: https://github.com/r3labs/sse/blob/c6d5381ee3ca63828b321c16baa008fd6c0b4564/http.go#L16
-	if len(ev.Data) == 0 && len(ev.Comment) == 0 {
-		return nil
-	}
-
-	if len(ev.Data) > 0 {
-
-		if ev.ID != nil {
-			if _, err := fmt.Fprintf(w, "id: %s\n", ev.ID); err != nil {
-				return err
-			}
-		}
-
-		sd := bytes.Split(ev.Data, []byte("\n"))
-		for i := range sd {
-			if _, err := fmt.Fprintf(w, "data: %s\n", sd[i]); err != nil {
-				return err
-			}
-		}
-
-		if len(ev.Event) > 0 {
-			if _, err := fmt.Fprintf(w, "event: %s\n", ev.Event); err != nil {
-				return err
-			}
-		}
-
-		if len(ev.Retry) > 0 {
-			if _, err := fmt.Fprintf(w, "retry: %s\n", ev.Retry); err != nil {
-				return err
-			}
-		}
-	}
-
-	if len(ev.Comment) > 0 {
-		if _, err := fmt.Fprintf(w, ": %s\n", ev.Comment); err != nil {
-			return err
-		}
-	}
-
-	if _, err := fmt.Fprint(w, "\n"); err != nil {
-		return err
-	}
-
-	return nil
-}
-
 type handlePromptRequest struct {
 	StudentName string `json:"studentName" validate:"required"`
 	Grade       string `json:"grade" validate:"required"`
+	Language    string `json:"language" validate:"required"`
 }
 
 type dostuffResponse struct {
@@ -115,15 +42,50 @@ type dostuffResponse struct {
 }
 
 type ClaudeRequest struct {
-	Prompt            string `json:"prompt"`
-	MaxTokensToSample int    `json:"max_tokens_to_sample"`
-	// Omitting optional request parameters
+	AnthropicVersion string     `json:"anthropic_version"`
+	MaxTokens        int        `json:"max_tokens"`
+	Temperature      float64    `json:"temperature,omitempty"`
+	Messages         []Messages `json:"messages"`
+}
+
+type ClaudeReponse struct {
+	Content []Content `json:"content"`
+}
+
+type Messages struct {
+	Role    string    `json:"role"`
+	Content []Content `json:"content"`
+}
+
+type Content struct {
+	Type   string  `json:"type"`
+	Source *Source `json:"source,omitempty"`
+	Text   string  `json:"text,omitempty"`
+}
+
+type Source struct {
+	Type      string `json:"type"`
+	MediaType string `json:"media_type"`
+	Data      string `json:"data"`
+}
+
+type ImageAnalysis struct {
+	Interest     float64  `json:"interest"`
+	Confidence   float64  `json:"confidence"`
+	Keywords     []string `json:"keywords"`
+	Reason       string   `json:"reason"`
+	Applications []string `json:"applications"`
+}
+
+type Delta struct {
+	Type string `json:"type"`
+	Text string `json:"text"`
 }
 
 type ClaudeResponse struct {
-	Completion string `json:"completion"`
-	StopReason string `json:"stop_reason"`
-	Stop       string `json:"stop"`
+	Type  string `json:"type"`
+	Index int    `json:"index"`
+	Delta Delta  `json:"delta"`
 }
 
 func (handlers *Handlers) dostuff(ctx contexts.AuthenticatedContext) error {
@@ -149,9 +111,8 @@ func (handlers *Handlers) dostuff(ctx contexts.AuthenticatedContext) error {
 	}
 
 	knowledgeBaseString := *knowledgeBaseResponse.Output.Text
-	fmt.Println("Knowledgebase response: ", knowledgeBaseString)
 
-	streamResp, err := callClaude(sdkConfig, req.StudentName, req.Grade, knowledgeBaseString)
+	streamResp, err := callClaude(sdkConfig, req.StudentName, req.Grade, req.Language, knowledgeBaseString)
 
 	if err != nil {
 		return ctx.JSON(http.StatusInternalServerError, &helpers.APIResponse{
@@ -179,7 +140,7 @@ func (handlers *Handlers) dostuff(ctx contexts.AuthenticatedContext) error {
 					return err
 				}
 
-				fmt.Print(string(response.Completion))
+				fmt.Print(string(response.Delta.Text))
 				if resp, err := json.Marshal(response); err != nil {
 					return err
 				} else {
@@ -201,7 +162,7 @@ func (handlers *Handlers) dostuff(ctx contexts.AuthenticatedContext) error {
 	return nil
 }
 
-func callClaude(sdkConfig aws.Config, studentName string, grade string, knowledgeBaseString string) (*bedrockruntime.InvokeModelWithResponseStreamOutput, error) {
+func callClaude(sdkConfig aws.Config, studentName string, grade string, language string, knowledgeBaseString string) (*bedrockruntime.InvokeModelWithResponseStreamOutput, error) {
 	fmt.Println("Calling Anthropic Claude...")
 
 	client := bedrockruntime.NewFromConfig(sdkConfig)
@@ -236,11 +197,17 @@ func callClaude(sdkConfig aws.Config, studentName string, grade string, knowledg
 		</documents>
 
 		The student's grade for this submission is: ` + grade + `
+		Your response should be written in the language: ` + language + `.
+		
 		Based on the document and the grade provided, please analyze the student's performance. Consider the following:
-		1. What are the key strengths and weaknesses of the student's submission?
-		2. How does the grade align with the submission content?
+		1. What are the key strengths and weaknesses of the Student submission file in relation to Guideline 1 and Guideline 2?
+		2. Does the grade align with the Student submission file and if so, how?
 		3. What recommendations would you make for the student's future improvement?
 		4. Please refer to the student by the name: ` + studentName + `
+		5. The justification should include both the Student submission file strengths and weaknesses
+		6. Include line numbers and three word quotes from the Student submission file to support your analysis
+		7. Add quote "<span style="color: red">This feedback was generated with AI assistance. Remember to check through the response!</span>" at the end of the feedback
+
 
 		As an assessor, provide a detailed explanation (in bullet form) for why that specific grade was given to the student, based on the attached documents.
 		Please ensure your explanation covers both strengths and areas for improvement in the student's work.
@@ -249,8 +216,20 @@ func callClaude(sdkConfig aws.Config, studentName string, grade string, knowledg
 	wrappedPrompt := "Human: " + prompt + "\n\nAssistant:"
 
 	request := ClaudeRequest{
-		Prompt:            wrappedPrompt,
-		MaxTokensToSample: 2000,
+		AnthropicVersion: "bedrock-2023-05-31",
+		MaxTokens:        1000,
+		Temperature:      0.2,
+		Messages: []Messages{
+			{
+				Role: "user",
+				Content: []Content{
+					{
+						Type: "text",
+						Text: wrappedPrompt,
+					},
+				},
+			},
+		},
 	}
 
 	body, err := json.Marshal(request)
@@ -266,13 +245,7 @@ func callClaude(sdkConfig aws.Config, studentName string, grade string, knowledg
 
 	if err != nil {
 		errMsg := err.Error()
-		if strings.Contains(errMsg, "no such host") {
-			fmt.Printf("Error: The Bedrock service is not available in the selected region. Please double-check the service availability for your region at https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/.\n")
-		} else if strings.Contains(errMsg, "Could not resolve the foundation model") {
-			fmt.Printf("Error: Could not resolve the foundation model from model identifier: \"%v\". Please verify that the requested model exists and is accessible within the specified region.\n", regularModelARN)
-		} else {
-			fmt.Printf("Error: Couldn't invoke Anthropic Claude. Here's why: %v\n", err)
-		}
+		fmt.Println("Error calling Claude: ", errMsg)
 		os.Exit(1)
 	}
 
